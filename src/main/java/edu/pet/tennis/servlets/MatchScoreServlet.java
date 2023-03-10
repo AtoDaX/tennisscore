@@ -43,7 +43,7 @@ public class MatchScoreServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String uuid = (String) request.getParameter("uuid");
+        String uuid = request.getParameter("uuid");
 
         matchScoreController.handlePost(request,uuid);
 

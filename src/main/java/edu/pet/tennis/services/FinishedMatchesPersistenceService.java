@@ -22,7 +22,6 @@ public class FinishedMatchesPersistenceService {
         if (optionalMatch.isPresent()){
             return optionalMatch.get();
         } else {
-            //throw ex? return type to optional?
             return null;
         }
     }

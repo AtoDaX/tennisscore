@@ -39,7 +39,7 @@ public class NewMatchServlet extends HttpServlet {
         String generatedUUID = matchGeneratorController.handlePost(player1Name,player2Name);
         String redirect = String.format("/tennis_war_exploded/match-score?uuid=%s",generatedUUID);
         response.sendRedirect(redirect);
-        //request.getRequestDispatcher(redirect).forward(request,response);
+
 
     }
 }

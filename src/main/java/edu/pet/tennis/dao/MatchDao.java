@@ -64,10 +64,6 @@ public class MatchDao implements DaoInterface<Match> {
     public List<Match> findMatchesByPlayer(String name){
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         String hql = "FROM Match WHERE player1.name = :name or player2.name = :name";
-        /*String hql = "FROM Match " +
-                "left join Player as p1 ON p1.id = Match.player1.id " +
-                "left join Player as p2 ON p2.id = Match.player2.id " +
-                "WHERE p1.name = :name OR p2.name = :name";*/
         List<Match> matches = session.createQuery(hql).setParameter("name", name).getResultList();
 
         return matches;

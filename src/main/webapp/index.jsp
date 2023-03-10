@@ -2,13 +2,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Tennis scoreboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1><%= "Tennis scoreboard" %>
-</h1>
-<br/>
-<a href="new-match">New match</a>
-<a href="matches">Recent matches</a>
+<header>
+    <h1>Tennis scoreboard</h1>
+</header>
+<div>
+    <p><a href="new-match">New match</a></p>
+    <p><a href="matches">Recent matches</a></p>
+</div>
+
 </body>
 </html>
