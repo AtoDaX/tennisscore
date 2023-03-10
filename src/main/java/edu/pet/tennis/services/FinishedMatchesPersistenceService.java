@@ -27,6 +27,10 @@ public class FinishedMatchesPersistenceService {
         }
     }
 
+    public static List<Match> getFiltered(String filter){
+        return matchDao.findMatchesByPlayer(filter);
+    }
+
     public static List<Match> getAll(){
         return matchDao.findAll();
     }

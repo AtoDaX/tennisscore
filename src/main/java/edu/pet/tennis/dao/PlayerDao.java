@@ -24,10 +24,7 @@ public class PlayerDao implements DaoInterface<Player> {
     }
 
     public Optional<Player> findByName(String name){
-        /*Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Optional<Player> toReturn = Optional.of(session.get(Player.class, name));
-        session.close();
-        return toReturn;*/
+
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         String hql = "FROM Player WHERE name = :name";
         List<Player> playerList = session.createQuery(hql).setParameter("name", name).getResultList();
