@@ -6,7 +6,7 @@ import edu.pet.tennis.models.Match;
 import java.util.List;
 import java.util.Optional;
 
-public class FinishedMatchesPersistenceService {
+public class FinishedMatchesService {
     private static MatchDao matchDao = new MatchDao();
 
     public static void persist(String uuid){

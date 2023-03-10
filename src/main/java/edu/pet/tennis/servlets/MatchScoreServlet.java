@@ -1,15 +1,10 @@
 package edu.pet.tennis.servlets;
 
 import edu.pet.tennis.controller.MatchScoreController;
-import edu.pet.tennis.models.Match;
-import edu.pet.tennis.services.FinishedMatchesPersistenceService;
-import edu.pet.tennis.services.MatchScoreCalculationService;
 import edu.pet.tennis.services.OngoingMatchesService;
-import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
-
 import java.io.IOException;
 
 @WebServlet(name = "MatchScoreServlet", value = "/match-score")

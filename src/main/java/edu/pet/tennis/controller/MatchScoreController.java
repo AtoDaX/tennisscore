@@ -1,7 +1,7 @@
 package edu.pet.tennis.controller;
 
 import edu.pet.tennis.models.Match;
-import edu.pet.tennis.services.FinishedMatchesPersistenceService;
+import edu.pet.tennis.services.FinishedMatchesService;
 import edu.pet.tennis.services.MatchScoreCalculationService;
 import edu.pet.tennis.services.OngoingMatchesService;
 import jakarta.servlet.http.HttpServletRequest;
@@ -36,12 +36,12 @@ public class MatchScoreController {
         if (isEnd && p1set>p2set){
             ongoing.setWinner(ongoing.getPlayer1());
             request.setAttribute("winner",ongoing.getPlayer1().getName());
-            FinishedMatchesPersistenceService.persist(uuid);
+            FinishedMatchesService.persist(uuid);
 
         } else if (isEnd && p2set>p1set){
             ongoing.setWinner(ongoing.getPlayer2());
             request.setAttribute("winner",ongoing.getPlayer2().getName());
-            FinishedMatchesPersistenceService.persist(uuid);
+            FinishedMatchesService.persist(uuid);
         }
 
     }

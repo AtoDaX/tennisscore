@@ -1,10 +1,8 @@
 package edu.pet.tennis.controller;
 
 import edu.pet.tennis.models.Match;
-import edu.pet.tennis.services.FinishedMatchesPersistenceService;
+import edu.pet.tennis.services.FinishedMatchesService;
 import jakarta.servlet.http.HttpServletRequest;
-import jdk.dynalink.linker.LinkerServices;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,9 +17,9 @@ public class RecentMatchesController {
 
         if (request.getParameter("filter_by_player_name") != null && !request.getParameter("filter_by_player_name").isBlank()){
             filter = request.getParameter("filter_by_player_name");
-            allMatches = FinishedMatchesPersistenceService.getFiltered(filter);
+            allMatches = FinishedMatchesService.getFiltered(filter);
         } else {
-            allMatches = FinishedMatchesPersistenceService.getAll();
+            allMatches = FinishedMatchesService.getAll();
         }
 
 
