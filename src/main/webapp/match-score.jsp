@@ -14,17 +14,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <h1>Match uuid: ${uuid}</h1>
-</header>
 
-<div class="mainblock">
-    <div class="innerblock">
-        <table border="1" cellpadding="4">
+<div class="nav">
+    <a href="/tennis_war_exploded">Tennis scoreboard</a>
+    <a href="new-match">New match</a>
+    <a href="matches">Recent matches</a>
+    <div class="search-container">
+        <form action="matches" method="get" name="playerfilter">
+            <input type="text" placeholder="Player name..." name="filter_by_player_name">
+            <button type="submit">Find...</button>
+        </form>
+
+    </div>
+</div>
+
+<div class="content">
+
+        <table class="info">
             <tr>
                 <td></td>
-                <td>${p1name}</td>
-                <td>${p2name}</td>
+                <th>${p1name}</th>
+                <th>${p2name}</th>
             </tr>
             <tr>
                 <td>Score</td>
@@ -42,13 +52,20 @@
                 <td>${p2set}</td>
             </tr>
         </table>
-    </div>
-    <div class="innerblock">
-        <form action="match-score?uuid=${uuid}" method="post" name="scoredform">
-            <button name = pscored value="1">${p1name} scored!</button>
-            <button name="pscored" value="2">${p2name} scored!</button>
-        </form>
-    </div>
+
+        <div class="score-form">
+            <form class="scoreform" action="match-score?uuid=${uuid}" method="post" name="scoredform">
+                <button name = pscored value="1">${p1name} scored!</button>
+                <button name="pscored" value="2">${p2name} scored!</button>
+            </form>
+        </div>
+
+
+
+
+</div>
+<div class="footer">
+    <p>footer</p>
 </div>
 </body>
 </html>

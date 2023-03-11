@@ -10,22 +10,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <h1>Recent matches:</h1>
-</header>
-
-<div class="mainblock">
-    <div class="innerblock">
+<div class="nav">
+    <a href="/tennis_war_exploded">Tennis scoreboard</a>
+    <a href="new-match">New match</a>
+    <a class="current" href="matches">Recent matches</a>
+    <div class="search-container">
         <form action="matches" method="get" name="playerfilter">
-            Player: <input type="text" name="filter_by_player_name" placeholder="Player name">
-            <input type="submit" value="Find">
+            <input type="text" placeholder="Player name..." name="filter_by_player_name">
+            <button type="submit">Find...</button>
         </form>
-    </div>
 
-    <div class="innerblock">
-        <div>
+    </div>
+</div>
+
+<div class="content">
+    <h1>Recent matches</h1>
             <c:if test="${size>0}">
-            <table border="1" cellpadding="4">
+            <table class="info">
                 <tr>
                     <th>Player1</th>
                     <th>Player2</th>
@@ -39,11 +40,11 @@
                     </tr>
                 </c:forEach>
             </table>
-        </div>
 
-        <div class="innerblock">
-            <div>
-                <table border="1" cellpadding="4">
+
+
+
+                <table class="paginator">
                     <tr>
                         <c:if test="${currentPage != 1}">
                             <td><a href="matches?filter_by_player_name=${filter_by_player_name}&page=${currentPage - 1}">Previous</a></td>
@@ -64,25 +65,15 @@
                         </c:if>
                     </tr>
                 </table>
-            </div>
+
 
 
             <c:if test="${size eq 0}">
-                <p>No matches!</p>
+                <h1>No matches!</h1>
             </c:if>
-        </div>
-
-
     </div>
-
-</div>
-
-
-
-
-<div class="mainblock">
-    <a href="/tennis_war_exploded">Main page</a>
-    <a href="new-match">New match</a>
+<div class="footer">
+    <p>footer</p>
 </div>
 
 

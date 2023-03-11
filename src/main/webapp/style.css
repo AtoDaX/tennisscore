@@ -1,9 +1,150 @@
-.mainblock {
-    margin: 10px;
+
+
+body {
+    background-color: dimgrey;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
-.innerblock{
-    margin: 5px;
+
+table.info  {
+    width: 350px;
+    margin: 0 auto 20px;
+    border: 1px solid #4d4c4c;
+
+    border-collapse: collapse;
+
 }
-input{
-    margin: 4px;
+
+table.info th {
+    font-weight: bold;
+    padding: 5px;
+    background: #efefef;
+    border: 1px solid #4d4c4c;
+
+}
+
+table.info td {
+    border: 1px solid #4d4c4c;
+    padding: 5px;
+
+}
+
+table.paginator {
+    margin: 0 auto;
+    border: 0;
+}
+
+table.paginator td{
+    width: 7px;
+    border: 0;
+}
+table.paginator tr{
+    border: 0;
+}
+
+.nav {
+    overflow: hidden;
+    background-color: #333;
+}
+.nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.nav a.current{
+    background-color: #ddd;
+    color: black;
+}
+.nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+.nav .search-container {
+    float: right;
+}
+
+.nav input[type=text] {
+    padding: 6px;
+    font-size: 17px;
+    border: none;
+}
+
+.nav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+}
+
+.nav .search-container button:hover {
+    background: #ccc;
+}
+
+.scoreform{
+    text-align: center;
+}
+.scoreform button{
+    horiz-align: center;
+    padding: 6px 10px;
+    margin-right: 16px;
+    background: #726c6c;
+    font-size: 17px;
+    border: none;
+}
+.scoreform button:hover{
+    background: #3d3939;
+}
+
+form.new-match {
+    border: 5px solid #f1f1f1;
+}
+.content .form-container {
+    text-align: left;
+    margin: 24px 50px 12px;
+}
+.content .input-container {
+    padding: 16px 20px;
+    text-align:left;
+}
+.content input[type=submit] {
+    background-color: #907272;
+    color: #ffffff;
+    padding: 14px 0;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+}
+.content input[type=submit]:hover {
+    opacity: 0.8;
+}
+
+.content input[type=text] {
+    width: 100%;
+    padding: 16px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.content {
+    background-color: #ddd;
+    margin: 0 3%;
+    padding: 10px;
+
+}
+
+.footer {
+    background-color: #333;
+    padding: 10px;
+}
+h1, h2{
+    text-align: center;
 }
