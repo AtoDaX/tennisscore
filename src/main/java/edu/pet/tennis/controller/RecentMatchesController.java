@@ -9,7 +9,7 @@ import java.util.List;
 public class RecentMatchesController {
     public void handleGet(HttpServletRequest request){
         int page = 1;
-        int recordsPerPage = 1;
+        int recordsPerPage = 2;
         List<Match> allMatches;
         String filter=null;
         if(request.getParameter("page") != null)
