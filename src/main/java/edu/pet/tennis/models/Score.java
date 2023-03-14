@@ -12,7 +12,7 @@ public class Score {
     public Score() {
         playerNumber = 0;
         scorePlayers = new HashMap<>();
-        countSetsToWin = 2;
+        countSetsToWin = 1;
         matchEnd = false;
     }
 

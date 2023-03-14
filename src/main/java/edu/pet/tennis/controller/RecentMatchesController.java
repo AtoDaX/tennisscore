@@ -26,7 +26,12 @@ public class RecentMatchesController {
         List<Match> matches = new ArrayList<>();
         if (allMatches.size()!=0){
             for (int i = (page-1)*recordsPerPage; i<page*recordsPerPage; i++){
-                matches.add(allMatches.get(i));
+                try {
+                    matches.add(allMatches.get(i));
+                }catch (IndexOutOfBoundsException e){
+                    break;
+                }
+
             }
         }
 
